@@ -6,7 +6,11 @@ class Matrix
   end
 
   def rows
-    array_numbers.each_line.map { |row| row.split.map { |row| row.to_i  } }
+    array_numbers.each_line.map do |row|
+      row.split.map do |row|
+        row.to_i
+      end
+    end
   end
 
   def columns
